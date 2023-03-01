@@ -11,9 +11,19 @@ import { SearchBar } from '../SearchBar'
 import { UserButton } from '../UserButton'
 import { CategoriesRow } from '../CategoriesRow'
 
-export default function Navbar() {
+// constants
+import { NAVBAR_HEIGHT } from './Navbar.constants'
+
+interface Props {
+  hiddeCategories?: boolean
+}
+
+export default function Navbar({ hiddeCategories = false }: Props) {
   return (
-    <div className="flex flex-col gap-12 p-5 px-10 md:px-5 sm:gap-5">
+    <div
+      style={{ height: NAVBAR_HEIGHT }}
+      className="fixed z-50 flex w-full flex-col gap-12 p-5 px-10 pb-0 backdrop-blur-2xl md:px-5 sm:gap-5"
+    >
       {/* Navbar */}
       <div className="flex w-full flex-row items-center justify-between sm:flex-col">
         <Link className="flex-1" href={'/'}>
@@ -49,7 +59,7 @@ export default function Navbar() {
       </div>
 
       {/* Categories */}
-      <CategoriesRow />
+      {!hiddeCategories && <CategoriesRow />}
     </div>
   )
 }

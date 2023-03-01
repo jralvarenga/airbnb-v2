@@ -11,7 +11,7 @@ export default function CategoriesRow() {
   )
 
   return (
-    <div className="flex flex-1 gap-12 font-cereal-medium text-sm text-text-secondary pb-4 overflow-x-scroll scrollbar">
+    <div className="scrollbar flex flex-1 gap-12 overflow-x-scroll pb-4 font-cereal-medium text-sm text-text-secondary">
       {CATEGORIES.map((categorie, i) => (
         <button
           key={i}
@@ -28,7 +28,7 @@ export default function CategoriesRow() {
             className="h-7 w-7"
           />
           <span
-            className={`capitalize duration-150 whitespace-nowrap ${
+            className={`whitespace-nowrap capitalize duration-150 ${
               categorie === selectedCategorie
                 ? 'text-text-main'
                 : 'text-text-secondary'
