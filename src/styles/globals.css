@@ -8,6 +8,19 @@
     -webkit-appearance: none;
     margin: 0;
   }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+  }
+
+  textarea:focus,
+  input:focus,
+  select:focus {
+    outline: none;
+  }
 }
 
 @layer utilities {

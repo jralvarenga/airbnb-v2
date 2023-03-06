@@ -32,7 +32,7 @@ module.exports = {
         },
         bg: {
           light: '#fff',
-          dark: '#000',
+          dark: 'rgb(34, 34, 34)',
         },
         divider: '#DDDDDD',
       },
@@ -43,6 +43,20 @@ module.exports = {
         'cereal-xbold': ['cereal-xbold', 'sans-serif'],
         'cereal-black': ['cereal-black', 'sans-serif'],
       },
+    },
+    keyframes: {
+      'blur-md': {
+        from: { 'backdrop-filter': 'blur(0px)' },
+        to: { 'backdrop-filter': 'blur(12px)' },
+      },
+      'enter-login-box': {
+        from: { transform: 'translateY(500px)', filter: 'blur(12px)' },
+        to: { transform: 'translateY(0px)', filter: 'blur(0px)' },
+      },
+    },
+    animation: {
+      'backdrop-blur-md': 'blur-md 500ms ease-in forwards',
+      'enter-login-page': 'enter-login-box 500ms ease-in-out forwards',
     },
     screens: {
       '2xl': { max: '1535px' },
