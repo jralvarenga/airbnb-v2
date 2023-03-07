@@ -1,3 +1,87 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+  }
+
+  textarea:focus,
+  input:focus,
+  select:focus {
+    outline: none;
+  }
+}
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: 'inherit';
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: 'inherit';
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: theme('colors.divider');
+    cursor: pointer;
+    border-radius: 100vh;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.divider');
+  }
+}
+
+@font-face {
+  font-family: 'cereal-black';
+  src: local('cereal-black'),
+    url(../assets/font/AirbnbCereal_W_Black.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'cereal-bold';
+  src: local('cereal-bold'),
+    url(../assets/font/AirbnbCereal_W_Bold.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'cereal-light';
+  src: local('cereal-light'),
+    url(../assets/font/AirbnbCereal_W_Light.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'cereal-medium';
+  src: local('cereal-medium'),
+    url(../assets/font/AirbnbCereal_W_Medium.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'cereal-regular';
+  src: local('cereal-regular'),
+    url(../assets/font/AirbnbCereal_W_Regular.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'cereal-xbold';
+  src: local('cereal-xbold'),
+    url(../assets/font/AirbnbCereal_W_XBold.otf) format('truetype');
+}
